@@ -1,0 +1,153 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "SO - Integration";
+}
+
+<style>
+    .table td {
+        vertical-align: middle;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .table th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    .table th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+</style>
+
+<h3>Total Count: @Model.AddressCount</h3>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Item Number</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Warehouse</th>
+            <th scope="col">Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ITM-016131</td>
+            <td>Falak Easy Cook Sella 25KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ITM-016132</td>
+            <td>Falak Basmati Rice 50KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ITM-016133</td>
+            <td>Falak Super Basmati 10KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ITM-016134</td>
+            <td>Falak Jasmine Rice 5KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ITM-016135</td>
+            <td>Falak Sella Basmati Rice 20KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ITM-016136</td>
+            <td>Falak Long Grain Rice 15KG</td>
+            <td>
+                <select class="form-select">
+                    <option value="Matco-01">Matco-01</option>
+                    <option value="Matco-02">Matco-02</option>
+                    <option value="Matco-03">Matco-03</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select">
+                    <option value="kg">kg</option>
+                    <option value="lb">lb</option>
+                    <option value="g">g</option>
+                </select>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-end mt-5">
+    <button type="submit" class="btn btn-primary w-auto">Generate Sales Order</button>
+</div>

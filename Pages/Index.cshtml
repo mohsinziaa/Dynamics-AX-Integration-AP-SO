@@ -1,0 +1,91 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "SO - Integration";
+}
+
+<style>
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    .table td:first-child {
+        white-space: nowrap;
+    }
+
+    .table td select {
+        cursor: pointer;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .table th:first-child {
+        border-top-left-radius: 10px;
+        white-space: nowrap;
+    }
+
+    .table th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+</style>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Item Number</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Site</th>
+            <th scope="col">Warehouse</th>
+            <th scope="col">Batch Number</th>
+            <th scope="col">Location</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.itemsList) 
+        {
+            <tr>
+                <td>@item.itemNumber</td>
+                <td>@item.itemName</td>
+                <td>
+                    <select class="form-select">
+                        <option value="Matco-01">Matco-01</option>
+                        <option value="Matco-02">Matco-02</option>
+                        <option value="Matco-03">Matco-03</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-select">
+                        <option value="WH-01">WH-01</option>
+                        <option value="WH-02">WH-02</option>
+                        <option value="WH-03">WH-03</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-select">
+                        <option value="BN-01">BN-01</option>
+                        <option value="BN-02">BN-02</option>
+                        <option value="BN-03">BN-03</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-select">
+                        <option value="Location-01">Location-01</option>
+                        <option value="Location-02">Location-02</option>
+                        <option value="Location-03">Location-03</option>
+                    </select>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-end mt-5">
+    <button type="submit" class="btn btn-primary w-auto">Generate Sales Order</button>
+</div>
